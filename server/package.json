@@ -5,10 +5,8 @@
   "author": "875682652",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "es6": "babel demo/user.js -o demo/user-com.js"
+    "start": "node bin/www",
+    "pm2 start": "pm2 start bin/www"
   },
   "dependencies": {
     "axios": "^0.16.1",

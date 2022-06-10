@@ -157,11 +157,22 @@
     </div>
 </template>
 <script>
+  import axios from 'axios'
     export default{
         data(){
             return {
 
             }
+        },
+        mounted () {
+          axios.get('/goods').then((res) => {
+            let res = res.data;
+            if (res.status === '0') {
+              this.goodsList = res.result;
+            } else {
+              this.goodsList = []
+            }
+          })
         }
     }
 </script>

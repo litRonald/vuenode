@@ -1,6 +1,5 @@
 var mysql  = require('mysql');  
  
-
 var express = require('express')
 
 var router = express.Router();
@@ -10,15 +9,15 @@ var connection = mysql.createConnection({
   user     : 'root',              
   password : 'root',       
   port: '3306',                   
-  database: 'test' 
+  database: 'goods' // test 下面的 goods数据库
 }); 
  
 connection.connect();
  
-var  sql = 'SELECT * FROM websites';
-
+var  sql = 'SELECT * FROM goods'; // 数据库中的表
+var goods = []
 function getGoodsSQL () {
-  let goods = []
+  
   //查找数据库
   connection.query(sql,function (err, result) {
     if(err){
@@ -37,8 +36,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send(getGoodsSQL());
 });
 
 
-module.exports = router
+module.exports = router;

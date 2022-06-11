@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70e02ca3-7ba1-41d6-8e40-3947d014c3f1" name="Default" comment="" />
-    <ignored path="ImoocMall.iws" />
+    <ignored path="ic.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="ImoocMall" />
+    <favorites_list name="icMall" />
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -129,17 +129,17 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ImoocMall" />
+              <option name="myItemId" value="icMall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ImoocMall" />
+              <option name="myItemId" value="icMall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ImoocMall" />
+              <option name="myItemId" value="icMall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -152,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="/Express/ImoocMall" />
+    <property name="last_opened_file_path" value="/Express/icMall" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -184,7 +184,7 @@
       <recent name="$PROJECT_DIR$/src/assets/css" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.ImoocApi">
+  <component name="RunManager" selected="Node.js.icApi">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -250,11 +250,11 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="ImoocApi" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="server/bin/www" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="icApi" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="server/bin/www" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.ImoocApi" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.icApi" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />

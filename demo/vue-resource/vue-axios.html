@@ -51,9 +51,9 @@
           remember:"1",
           pwencode:"1",
           browser_key:"c1eafecb03c5ef07651fb7bd9a7f4b72",
-          referer:"http://www.imooc.com"
+          referer:"http://www.ic.com"
         }
-        //http://www.imooc.com/passport/user/login
+        //http://www.ic.com/passport/user/login
         axios.post("/login",params).then(function (res) {
           console.log("res:"+res.data.msg);
           _this.response = res.data;
@@ -63,7 +63,7 @@
       },
       sendJsonp: function () {
         var _this = this;
-        jsonp("http://www.imooc.com/course/ajaxskillcourse?cid=796",{
+        jsonp("http://www.ic.com/course/ajaxskillcourse?cid=796",{
           params:{
             userId:"1001"
           }

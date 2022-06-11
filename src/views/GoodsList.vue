@@ -188,7 +188,7 @@
             // })
             let that = this
             // api 就等于  http://127.0.0.1:3000
-            await axios.get('/goodsSql', {pageSize: 10, page: 1}).then((result) => {
+            await axios.get('http://127.0.0.1:3000/goodsSql', {pageSize: 10, page: 1}).then((result) => {
               // console.log(result)
               let res = result.data
               // console.log(res.data)

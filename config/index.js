@@ -36,7 +36,7 @@ module.exports = {
         target:'http://localhost:3000'
       },
       '/goodsSql':{
-        target:'http://localhost:3000',
+        target:'http://localhost:3000', //
         changeOrigin: true,
       },
       // '/users/*':{

@@ -72,7 +72,19 @@
             <div class="accessory-list-wrap">
               <div class="accessory-list col-4">
                 <ul>
-                  <li>
+                  <li v-for="(item, index) in goodsList" :key="index">
+                    <div class="pic">
+                      <a href="#"><img :src="`static/`+(item.productImg)" alt=""></a>
+                    </div>
+                    <div class="main">
+                      <div class="name">{{item.productName}}</div>
+                      <div class="price">￥{{item.productPrice}}</div>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="btn btn--m">加入购物车</a>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li>
                     <div class="pic">
                       <a href="#"><img src="static/1.jpg" alt=""></a>
                     </div>
@@ -119,7 +131,7 @@
                         <a href="javascript:;" class="btn btn--m">加入购物车</a>
                       </div>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -161,18 +173,37 @@
     export default{
         data(){
             return {
-
+              goodsList: []
             }
         },
-        mounted () {
-          axios.get('/goods').then((res) => {
-            let res = res.data;
-            if (res.status === '0') {
-              this.goodsList = res.result;
-            } else {
-              this.goodsList = []
-            }
-          })
+        methods: {
+          async getGoodsList () {
+            // axios.get('http://127.0.0.1:3000/goodsSql').then((res) => {
+            //   let res = res.data;
+            //   if (res.status === '0') {
+            //     this.goodsList = res.result;
+            //   } else {
+            //     this.goodsList = []
+            //   }
+            // })
+            let that = this
+            // api 就等于  http://127.0.0.1:3000
+            await axios.get('/goodsSql', {pageSize: 10, page: 1}).then((result) => {
+              // console.log(result)
+              let res = result.data
+              // console.log(res.data)
+              if (res.message === 'success') {
+                that.goodsList = res.data
+              // } else {
+              //   this.goodsList = []
+              }
+            })
+          }
+        },
+        created () {
+          this.getGoodsList()
+
+          
         }
     }
 </script>

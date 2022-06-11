@@ -13,3 +13,5 @@ pm2 start ./bin/www
 pm2 delete all
 
 
+## 谨慎使用es6 ts语法
+

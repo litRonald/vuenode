@@ -39,14 +39,14 @@
     },
     {
       "productId":"10007",
-      "productName":"小米6",
-      "prodcutPrice":"2499",
+      "productName":"小米3",
+      "prodcutPrice":"1299",
       "prodcutImg":"4.jpg"
     },
     {
       "productId":"10008",
-      "productName":"小米6",
-      "prodcutPrice":"2499",
+      "productName":"小米2",
+      "prodcutPrice":"1099",
       "prodcutImg":"5.jpg"
     }
   ]

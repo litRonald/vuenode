@@ -2,7 +2,7 @@ let http = require('http');
 
 let util = require('util')
 
-http.get("http://www.imooc.com/u/card", function (res) {
+http.get("http://www.baidu.com/u/card", function (res) {
 
     let data = '';
 

@@ -21,11 +21,11 @@ export default new Router({
       name: 'Cart',
       component:Cart
     },
-    {
-      path: '/goods',
-      name: 'GoodsList',
-      component: GoodsList
-    },
+    // {
+    //   path: '/goods',
+    //   name: 'GoodsList',
+    //   component: GoodsList
+    // },
     {
       path: '/address',
       name: 'Address',

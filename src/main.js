@@ -45,30 +45,30 @@ new Vue({
   store,
   router,
   mounted(){
-    this.checkLogin();
-    this.getCartCount();
+    // this.checkLogin();
+    // this.getCartCount();
   },
   methods:{
-    checkLogin(){
-      axios.get("users/checkLogin").then(res=> {
-        var res = res.data;
-        if (res.status == "0") {
-          this.$store.commit("updateUserInfo", res.result);
-        }else{
-          if(this.$route.path!="/goods"){
-            this.$router.push("/goods");
-          }
-        }
-      });
-    },
-    getCartCount(){
-      axios.get("users/getCartCount").then(res=>{
-        var res = res.data;
-        if(res.status=="0"){
-          this.$store.commit("updateCartCount",res.result);
-        }
-      });
-    }
+    // checkLogin(){
+    //   axios.get("users/checkLogin").then(res=> {
+    //     var res = res.data;
+    //     if (res.status == "0") {
+    //       this.$store.commit("updateUserInfo", res.result);
+    //     }else{
+    //       if(this.$route.path!="/goods"){
+    //         this.$router.push("/goods");
+    //       }
+    //     }
+    //   });
+    // },
+    // getCartCount(){
+    //   axios.get("users/getCartCount").then(res=>{
+    //     var res = res.data;
+    //     if(res.status=="0"){
+    //       this.$store.commit("updateCartCount",res.result);
+    //     }
+    //   });
+    // }
   },
   template: '<App/>',
   //render: h => h(App),

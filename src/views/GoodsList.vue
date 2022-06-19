@@ -74,7 +74,7 @@
                 <ul>
                   <li v-for="(item, index) in goodsList" :key="index">
                     <div class="pic">
-                      <a href="#"><img :src="`static/`+(item.productImg)" alt=""></a>
+                      <a href="#"><img :src="require(`@/../static/`+item.productImg)" alt=""></a>
                     </div>
                     <div class="main">
                       <div class="name">{{item.productName}}</div>
@@ -170,6 +170,7 @@
 </template>
 <script>
   import axios from 'axios'
+  import {handleGoodsList} from './api/good.js'
     export default{
         data(){
             return {
@@ -177,33 +178,30 @@
             }
         },
         methods: {
-          async getGoodsList () {
-            // axios.get('http://127.0.0.1:3000/goodsSql').then((res) => {
-            //   let res = res.data;
-            //   if (res.status === '0') {
-            //     this.goodsList = res.result;
-            //   } else {
-            //     this.goodsList = []
-            //   }
-            // })
-            let that = this
-            // api 就等于  http://127.0.0.1:3000
-            await axios.get('http://127.0.0.1:3000/goodsSql', {pageSize: 10, page: 1}).then((result) => {
-              // console.log(result)
-              let res = result.data
-              // console.log(res.data)
-              if (res.message === 'success') {
-                that.goodsList = res.data
-              // } else {
-              //   this.goodsList = []
-              }
-            })
+          // async getGoodsList () {
+          //   let that = this
+          //   await axios.post('http://127.0.0.1:3000/goodsSql', {pageSize: 10, page: 1}).then((result) => {
+          //     if (result.message === 'success') {
+          //       let res = result.data
+          //       that.$set(that, 'goodsList', res)
+          //       console.log(res)
+          //       // that.goodsList = res
+          //     }
+          //   })
+          // },
+
+          async handlerGoods() {
+            try {
+              let {data: data} = await handleGoodsList({pageSize: 10, page: 1})
+              this.$set(this, 'goodsList', data)
+            } catch(e) {
+              console.log(e)
+            }
           }
         },
         created () {
-          this.getGoodsList()
-
-          
+          // this.getGoodsList()
+          this.handlerGoods()
         }
     }
 </script>

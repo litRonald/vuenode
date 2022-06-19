@@ -41,7 +41,8 @@ function getGoodsSQL () {
       status: result.status,
       data: result,
       pageSize: 10,
-      page: 1
+      page: 1,
+      code: 200
     }
 
   });
@@ -55,6 +56,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.send(getGoodsSQL());
 });
-
+// post 对应post get对应get
+router.post('/', function(req, res, next) {
+  res.send(getGoodsSQL());
+});
 
 module.exports = router;

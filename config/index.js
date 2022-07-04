@@ -39,6 +39,13 @@ module.exports = {
         target:'http://localhost:3000', //
         changeOrigin: true,
       },
+      // [env.VITE_APP_BASE_API]: { // 代理解决 跨域问题
+      //   target: '',
+      //   changeOrigin: true,
+      //   rewrite: path => {
+      //     path.replace(new RegExp('^' + env.VITE_APP_BASE_API), '')
+      //   }
+      // }
       // '/users/*':{
       //   target:'http://localhost:3000'
       // }
